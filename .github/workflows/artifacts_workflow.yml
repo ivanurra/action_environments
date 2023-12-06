@@ -1,18 +1,18 @@
 name: dynamic-workflow-and-upload-files
 on:
   workflow_dispatch:
-      inputs:
-        index_document:
-          descripcion: 'Name of the index document'
-          required: true
-          default: 'index.html'
-        error_document:
-          descripcion: 'Name of the error document'
-          required: true
-          default: 'error.html'
+    inputs:
+      index_document:
+        descripcion: "Name of the index document"
+        required: true
+        default: "index.html"
+      error_document:
+        descripcion: "Name of the error document"
+        required: true
+        default: "error.html"
 env:
   BUCKET_NAME: website-artifacts
-jobs: 
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
